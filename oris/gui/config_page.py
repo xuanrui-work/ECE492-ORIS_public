@@ -69,9 +69,10 @@ class ConfigPage(tk.Frame):
         os.makedirs(RECORD_SAVE_PATH, exist_ok=True)
 
         for file in os.scandir(RECORD_SAVE_PATH):
-            os.remove(file.path)
-            self.clear_record_l.config(text=f'Deleted: "{file.name}"')
-            self.update_idletasks()
+            if file.is_file():
+                os.remove(file.path)
+                self.clear_record_l.config(text=f'Deleted: "{file.name}"')
+                self.update_idletasks()
 
         self.clear_record_l.config(text='All scan records have been deleted.')
         self.clear_record_l.after(
