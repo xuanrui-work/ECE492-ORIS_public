@@ -5,8 +5,6 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from PIL import Image
 import cgi, os, time
 
-from matplotlib import container
-
 from band_detection import BandDetectionResult
 from record import *
 from resistor import *

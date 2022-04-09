@@ -14,7 +14,7 @@ import statistics
 import logging
 logger = logging.getLogger(__name__)
 
-TFLITE_MODEL_PATH = '../tflite_models/resistor_band_300x300_ssd_mobilenet_v2_320x320_coco17_tpu-8_aug2.tflite'
+TFLITE_MODEL_PATH = '../tflite_models/resistor_band_300x300_ssd_mobilenet_v2_320x320_coco17_tpu-8_aug3.tflite'
 
 class BandDetectionResult:
     _STDEV_THRESHOLD_X = 15
